@@ -2,18 +2,24 @@
 
   <head>
    <meta charset="UTF-8">
-    <title>form</title>
+    <title>กรอกข้อมูลนักเรียนBy karinzaa!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+     body {
+           font-family: 'Athiti', sans-serif;
+            
+        background-color: #ffe699 ;
+}
       h1 {
         font-size: 2em
       }
       
       input,
       button {
+      font-family: 'Athiti', sans-serif;
         min-width: 72px;
         min-height: 36px;
-        border: 0.5px solid grey;
+        border: 0.5px solid #ffe699;
       }
       
       label,
@@ -25,12 +31,11 @@
       input {
         margin-bottom: 1.5em;
       }
-
     </style>
   </head>
 
   <body>
-    <h1>กรอกข้อมูลจ้าาาา</h1>
+    <h1>กรอกข้อมูลนักเรียนBy karinzaa!</h1>
     <label for="num1">Name</label>
     <input placeholder="อาร์ม" id="num1">
     <label for="num2">Lastname</label>
@@ -48,7 +53,7 @@
     <script>
       function onClick() {
   if (inputsAreEmpty()) {
-    label.textContent = 'กรุณากรอกข้อมูลให้ครบด้วยจ้าาาา';
+    label.textContent = 'กรุณากรอกข้อมูลให้ครบด้วยจ้า';
     return;
   }
   updateLabel();
@@ -89,7 +94,7 @@ function updateLabel() {
     else {
     totalScore = "ข้อมูลไม่ถูกต้อง";
     }
-  var sum ='[Your name] ' +addend1 + ' ' + addend2 + ' [Subject] ' + addend3+ ' [คะเเนนรวม] ' + totalScore;
+  var sum ='ชื่อ:' +addend1 + ' ' + addend2 + '  วิชา:' + addend3+ '  เกรด:' + totalScore;
   label.textContent = sum;
 }
 function getNumber1() {
@@ -114,8 +119,8 @@ var inputs = document.querySelectorAll('input');
 var label = document.querySelector('p');
 var button = document.querySelector('button');
 button.addEventListener('click', onClick);
-
     </script>
   </body>
 
 </html>
+
