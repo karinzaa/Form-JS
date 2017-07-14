@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>กรอกข้อมูลจ้าาาา</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1 {
+        font-size: 2em
+      }
+      input, button {
+        min-width: 72px;
+        min-height: 36px;
+        border: 0.5px solid grey;
+      }
+      label, input, button {
+        display: block;
+      }
+      input {
+        margin-bottom: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>กรอกข้อมูลจ้าาาา</h1>
+    <label for="num1">Name</label>
+    <input placeholder="อาร์ม" id="num1">
+    <label for="num2">Lastname</label>
+    <input placeholder="มีพ่อชื่อไก่" id="num2">
+    <label for="num3">Subject</label>
+    <input placeholder="อะไรก็ได้โตเเล้ว" id="num3">
+    <label for="num4">คะเเนนเก็บ</label>
+    <input placeholder="Over9000" id="num4">
+    <label for="num5">คะเเนนกลางภาค</label>
+    <input placeholder="ม.112" id="num5">
+    <label for="num6">คะเเนนปลายภาค</label>
+    <input placeholder="ม.44" id="num6">
+    <button>Summit</button>
+    <p></p>
+    <script>
+        function onClick() {
+  if (inputsAreEmpty()) {
+    label.textContent = 'กรุณากรอกข้อมูลให้ครบด้วยจ้าาาา';
+    return;
+  }
+  updateLabel();
+}
+function inputsAreEmpty() {
+  if (getNumber1() === '' || getNumber2() === '' || getNumber3() === '' || getNumber4() === '' || getNumber5() === '' || getNumber6() === '') {
+    return true;
+  } else {
+    return false;
+  }
+}
+function updateLabel() {
+  var addend1 = getNumber1();
+  var addend2 = getNumber2();
+  var addend3 = getNumber3();
+  var addend4 = getNumber4();
+  var addend5 = getNumber5();
+  var addend6 = getNumber6();
+  var sum ='[Your name] ' +addend1 + ' ' + addend2 + ' [Subject] ' + addend3+ ' [คะเเนนเก็บ] ' + addend4+ ' [คะเเนนกลางภาค] ' + addend5+ ' [คะเเนนปลายภาค] ' + addend6;
+  label.textContent = sum;
+}
+function getNumber1() {
+  return inputs[0].value;
+}
+function getNumber2() {
+  return inputs[1].value;
+}
+function getNumber3() {
+  return inputs[2].value;
+}
+function getNumber4() {
+  return inputs[3].value;
+}
+function getNumber5() {
+  return inputs[4].value;
+}
+function getNumber6() {
+  return inputs[5].value;
+}       
+var inputs = document.querySelectorAll('input');
+var label = document.querySelector('p');
+var button = document.querySelector('button');
+button.addEventListener('click', onClick);
+    </script>
+  </body>
+</html>
