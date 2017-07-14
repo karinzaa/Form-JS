@@ -69,7 +69,25 @@ function updateLabel() {
   var a = parseInt(addend4);
   var b = parseInt(addend5);
   var c = parseInt(addend6);
-  var totalScore = a+b+c; 
+  var x  = a+b+c;
+    if (x < 60) {
+    totalScore = "F";
+    } 
+    else if (x < 70) {
+    totalScore = "D";
+    } 
+    else if (x < 80){
+    totalScore = "C";
+    } 
+    else if (x < 90){
+    totalScore = "B";
+    }
+    else if (x <= 100){
+    totalScore = "A";
+    }
+    else {
+    totalScore = "ข้อมูลไม่ถูกต้อง";
+    }
   var sum ='[Your name] ' +addend1 + ' ' + addend2 + ' [Subject] ' + addend3+ ' [คะเเนนรวม] ' + totalScore;
   label.textContent = sum;
 }
