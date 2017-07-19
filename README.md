@@ -1,4 +1,4 @@
-[Imgur](http://i.imgur.com/aOVwhuF.jpg)
+![Imgur](http://i.imgur.com/aOVwhuF.jpg)
 |School project|
 |----|
 
