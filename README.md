@@ -1,5 +1,4 @@
-![Imgur](http://i.imgur.com/GAx6VGX.png)
-
+[Imgur](http://i.imgur.com/aOVwhuF.jpg)
 |School project|
 |----|
 
