@@ -3,7 +3,7 @@
 |School project|
 |----|
 
-# Form-JS-Karinzaa-Ver.
+# Form-JS
 
 ### Form JS in HTML Create by karinzaa! </n>
 
