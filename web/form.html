@@ -1,59 +1,69 @@
 <html>
 
   <head>
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
    <meta charset="UTF-8">
-    <title>กรอกข้อมูลนักเรียนBy karinzaa!</title>
+    <title>กรอกคะเเนนนักเรียน</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-     body {
-           font-family: 'Athiti', sans-serif;
+
+        body {
+            font-family: 'Kanit', sans-serif;
             
-        background-color: #ffe699 ;
+        background-color: #FFCC80;
 }
       h1 {
-        font-size: 2em
+          text-align: center;
+          color: #000000;
+          font-size: 2em
+              
       }
       
       input,
       button {
-      font-family: 'Athiti', sans-serif;
-        min-width: 72px;
+        display: block;
+        margin: auto;
+        border-radius: 3px;
+        font-family: 'Kanit', sans-serif;
+        min-width: 300px;
         min-height: 36px;
-        border: 0.5px solid #ffe699;
+        border: 1px solid #d9d9d9;
       }
       
       label,
       input,
       button {
+        text-align: center;
         display: block;
       }
       
       input {
+        text-align: center;
         margin-bottom: 1.5em;
       }
+
     </style>
   </head>
 
   <body>
-    <h1>กรอกข้อมูลนักเรียนBy karinzaa!</h1>
+    <h1>กรอกคะเเนนนักเรียน</h1>
     <label for="num1">ชื่อ</label>
-    <input placeholder="อาร์ม" id="num1">
+    <input placeholder="สมชาย" id="num1">
     <label for="num2">นามสกุล</label>
-    <input placeholder="มีพ่อชื่อไก่" id="num2">
+    <input placeholder="โลกพรม" id="num2">
     <label for="num3">วิชาเรียน</label>
-    <input placeholder="อะไรก็ได้โตเเล้ว" id="num3">
+    <input placeholder="คอมพิวเตอร์" id="num3">
     <label for="num4">คะเเนนเก็บ</label>
-    <input placeholder="Over9000" id="num4">
+    <input placeholder="เต็ม40" id="num4">
     <label for="num5">คะเเนนกลางภาค</label>
-    <input placeholder="ม.112" id="num5">
+    <input placeholder="เต็ม30" id="num5">
     <label for="num6">คะเเนนปลายภาค</label>
-    <input placeholder="ม.44" id="num6">
+    <input placeholder="เต็ม30" id="num6">
     <button>Summit</button>
     <p></p>
     <script>
-      function onClick() {
+      function onClick(){
   if (inputsAreEmpty()) {
-    label.textContent = 'กรุณากรอกข้อมูลให้ครบด้วยจ้า';
     return;
   }
   updateLabel();
@@ -92,10 +102,10 @@ function updateLabel() {
     totalScore = "A";
     }
     else {
-    totalScore = "ข้อมูลไม่ถูกต้อง";
+    totalScore = "ข้อมูลคะเเนนไม่ถูกต้อง";
     }
-  var sum ='ชื่อ:' +addend1 + ' ' + addend2 + '  วิชา:' + addend3+ '  เกรด:' + totalScore;
-  label.textContent = sum;
+  var sum ='[' + 'ชื่อ:' +addend1 + ' ' + addend2 + ' วิชา:' + addend3 + ' คะเเนนรวม:' + x + ' เกรด:' + totalScore+ ']';
+  label.textContent = label.textContent  + sum ;
 }
 function getNumber1() {
   return inputs[0].value;
@@ -119,6 +129,7 @@ var inputs = document.querySelectorAll('input');
 var label = document.querySelector('p');
 var button = document.querySelector('button');
 button.addEventListener('click', onClick);
+
     </script>
   </body>
 
